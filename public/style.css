@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+ }
+
+#map {
+  height: 100%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top:0;
+  left:0;
+  color: white;
+  background-color: #343A40;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar.active {
+  width: 250px;
+}
+
+#userInterface {
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  position: absolute;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 6px 8px;
+  border-radius: 5px;
+}
+
+#submitBtn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%
+}
+
+#trackIMO{
+  width: 115px;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.track-btn {
+  display: flex;
+  margin-top: 10px;
+}
+
+#startTrackBtn, #stopTrackBtn {
+  width: 80%;
+}
+
+.loader {
+  display: none;
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid #3498db;
+  width: 15px;
+  height: 15px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin-left: 10px;
+}
+.loader.active{
+  display:block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.section-header{
+  display: flex;
+  align-items: center
+
+}
+
+.countryList, .countryList option {
+  background-color: #3498db;
+  color:white;
+  padding: 4px 4px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+}
