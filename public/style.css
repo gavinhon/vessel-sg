@@ -1,23 +1,67 @@
+:root {
+  --topbar-clr: #041C32;
+  --sidebar-clr: #04293A;
+  --btn-clr: #064663;
+  --fnt-clr: #ECB365;
+
+  --bs: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+}
+
+select {
+  scrollbar-width: none;
+  /*For Firefox*/
+  ;
+  -ms-overflow-style: none;
+  /*For Internet Explorer 10+*/
+  ;
+}
+
+select:-webkit-scrollbar {
+  /*For WebKit Browsers*/
+  width: 0;
+  height: 0;
+}
+
+button {
+  background-color: var(--btn-clr);
+  color: var(--fnt-clr);
+  border: none;
+  box-shadow: var(--bs);
+  padding: 8px 8px;
+}
+
+input {
+  background-color: var(--btn-clr);
+  color: var(--fnt-clr);
+  border: none;
+  box-shadow: var(--bs);
+  padding: 8px 8px;
+  width: 100%
 }
 
 .topbar {
   top: 0;
   height: 62px;
   width: 100%;
-  background-color: #404258;
+  background-color: var(--topbar-clr);
   position: fixed;
   z-index: 1000;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--bs);
+  align-items: center;
+  display: flex;
 }
 
 .topbar h2 {
   margin-left: 18px;
-  color: white;
+  color: var(--fnt-clr);
 }
 
 #map {
@@ -32,8 +76,8 @@ body {
   z-index: 1000;
   top: 62px;
   left: 0;
-  color: white;
-  background-color: #474E68;
+  color: var(--fnt-clr);
+  background-color: var(--sidebar-clr);
   transition: 0.5s;
 }
 
@@ -45,9 +89,9 @@ body {
   left: 100%;
   position: absolute;
   padding: 16px 16px;
-  background-color: #50577A;
+  background-color: var(--btn-clr);
   border: none;
-  color: white;
+  color: var(--fnt-clr);
   cursor: pointer;
 }
 
@@ -57,7 +101,7 @@ body {
   right: 10px;
   font: 14px/16px Arial, Helvetica, sans-serif;
   position: absolute;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--bs);
   padding: 6px 8px;
   border-radius: 5px;
 }
@@ -68,16 +112,20 @@ body {
   width: 100%
 }
 
+.track-input {
+  display: flex;
+  width: 100%;
+}
+
 #trackIMO {
-  width: 115px;
+  width: 100%;
 }
 
 .info {
   padding: 6px 8px;
-  font: 14px/16px Arial, Helvetica, sans-serif;
   background: white;
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--bs);
   border-radius: 5px;
 }
 
@@ -94,6 +142,10 @@ body {
 #startTrackBtn,
 #stopTrackBtn {
   width: 80%;
+}
+
+#stopTrackBtn {
+  margin-left: 10px;
 }
 
 .loader {
@@ -130,9 +182,9 @@ body {
 
 .countryList,
 .countryList option {
-  background-color: #50577A;
-  color: white;
-  padding: 4px 4px;
+  background-color: var(--btn-clr);
+  color: var(--fnt-clr);
+  padding: 8px 8px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
 }
