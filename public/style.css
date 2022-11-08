@@ -1,8 +1,24 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
- }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar {
+  top: 0;
+  height: 62px;
+  width: 100%;
+  background-color: #404258;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.topbar h2 {
+  margin-left: 18px;
+  color: white;
+}
 
 #map {
   height: 100%;
@@ -10,19 +26,29 @@ html, body {
 
 .sidebar {
   height: 100%;
-  width: 0;
+  width: 250px;
+  transform: translateX(-100%);
   position: fixed;
   z-index: 1000;
-  top:0;
-  left:0;
+  top: 62px;
+  left: 0;
   color: white;
-  background-color: #343A40;
-  overflow-x: hidden;
+  background-color: #474E68;
   transition: 0.5s;
 }
 
 .sidebar.active {
-  width: 250px;
+  transform: translateX(0);
+}
+
+.sidebar-toggle {
+  left: 100%;
+  position: absolute;
+  padding: 16px 16px;
+  background-color: #50577A;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 #userInterface {
@@ -31,18 +57,18 @@ html, body {
   right: 10px;
   font: 14px/16px Arial, Helvetica, sans-serif;
   position: absolute;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   padding: 6px 8px;
   border-radius: 5px;
 }
 
-#submitBtn{
+#submitBtn {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%
 }
 
-#trackIMO{
+#trackIMO {
   width: 115px;
 }
 
@@ -50,8 +76,8 @@ html, body {
   padding: 6px 8px;
   font: 14px/16px Arial, Helvetica, sans-serif;
   background: white;
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
@@ -65,7 +91,8 @@ html, body {
   margin-top: 10px;
 }
 
-#startTrackBtn, #stopTrackBtn {
+#startTrackBtn,
+#stopTrackBtn {
   width: 80%;
 }
 
@@ -76,28 +103,35 @@ html, body {
   border-top: 2px solid #3498db;
   width: 15px;
   height: 15px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
   animation: spin 2s linear infinite;
   margin-left: 10px;
 }
-.loader.active{
-  display:block;
+
+.loader.active {
+  display: block;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.section-header{
+.section-header {
   display: flex;
   align-items: center
-
 }
 
-.countryList, .countryList option {
-  background-color: #3498db;
-  color:white;
+.countryList,
+.countryList option {
+  background-color: #50577A;
+  color: white;
   padding: 4px 4px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;

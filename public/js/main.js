@@ -1,4 +1,4 @@
-var map = L.map('map', { zoomControl: false}).setView([1.269358954908872, 103.79544516927918], 15);
+var map = L.map('map', { zoomControl: false }).setView([1.269358954908872, 103.79544516927918], 15);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
@@ -122,3 +122,7 @@ const updateDropdown = () => {
 };
 
 test();
+
+$('.sidebar-toggle').click(function () {
+  $('.sidebar').toggleClass('active');
+});

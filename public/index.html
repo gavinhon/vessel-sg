@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
-      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-      crossorigin=""
-    />
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
-      integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
-      crossorigin=""
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
-  </head>
-  <body>
-    <div id="map"></div>
-    <div class="sidebar active">
-      <div id="userInterface">
-        <h3>Show Ships by Country</h3>
-        <label for="country">Country Code: </label>
-        <select class="countryList" id="countryList">
-          <option value="01">01</option>
-        </select>
-        <button id="submitBtn">Show</button>
-        <br />
-        <div class="section-header">
-          <h3>Track Ship by IMO</h3>
-          <div class="loader"></div>
-        </div>
 
-        <label for="country">Track IMO: </label>
-        <input type="text" name="trackIMO" id="trackIMO" />
-        <br />
-        <div class="track-btn">
-          <button id="startTrackBtn">Start</button>
-          <button id="stopTrackBtn">Stop</button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+    integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+  <div class="topbar">
+    <h2>TrackShips</h2>
+  </div>
+  <div class="sidebar active">
+    <button class="sidebar-toggle"><i class="fa fa-bars"></i></button>
+    <div id="userInterface">
+      <h3>Show Ships by Country</h3>
+      <label for="country">Country Code: </label>
+      <select class="countryList" id="countryList">
+        <option value="01">01</option>
+      </select>
+      <button id="submitBtn">Show</button>
+      <br />
+      <div class="section-header">
+        <h3>Track Ship by IMO</h3>
+        <div class="loader"></div>
+      </div>
+
+      <label for="country">Track IMO: </label>
+      <input type="text" name="trackIMO" id="trackIMO" />
+      <br />
+      <div class="track-btn">
+        <button id="startTrackBtn">Start</button>
+        <button id="stopTrackBtn">Stop</button>
       </div>
     </div>
-    <script src="/js/main.js"></script>
-    <script src="/js/track.js"></script>
-  </body>
+  </div>
+  <script src="/js/main.js"></script>
+  <script src="/js/track.js"></script>
+</body>
+
 </html>
