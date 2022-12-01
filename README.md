@@ -1,4 +1,4 @@
-Vessel@SG
+vessel_sg
 
 This web application makes use of the open data from Singapore Maritime Data Hub.
 API registration is required under:  https://sg-mdh.mpa.gov.sg/
